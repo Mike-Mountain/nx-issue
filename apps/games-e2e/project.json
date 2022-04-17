@@ -1,0 +1,28 @@
+{
+  "root": "apps/games-e2e",
+  "sourceRoot": "apps/games-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/games-e2e/cypress.json",
+        "devServerTarget": "games:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "games:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/games-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["games"]
+}

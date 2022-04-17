@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "container": "apps/container",
+    "container-e2e": "apps/container-e2e",
+    "games": "apps/games",
+    "games-e2e": "apps/games-e2e"
+  }
 }
